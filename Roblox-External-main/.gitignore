@@ -1,0 +1,67 @@
+# Visual Studio v17
+*.user
+*.userprep
+*.usersettings
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio 2015/2017/2019/2022 cache/options directory
+.vs/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww]in32/
+[Aa]rm/
+[Aa]rm64/
+build/
+bin/
+obj/
+out/
+publish/
+
+# MSVC host-specific files
+*.ncb
+*.sdf
+*.opensdf
+*.vsp
+*.vspx
+*.sap
+*.opendb
+*.db
+
+# Intermediate files
+intermediates/
+ipch/
+*.aps
+*.idb
+*.dep
+*.res
+*.pch
+*.res
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.rsp
+*.pgc
+*.pgd
+*.meta
+*.tlog
+*.gm
+
+# External dependencies
+packages/
+
+# Other
+*.log
+*.ilk
+*.pdb
+*.exp
+*.map

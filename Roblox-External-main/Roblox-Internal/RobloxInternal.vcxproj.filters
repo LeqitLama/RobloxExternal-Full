@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\pointer_encryption">
+      <UniqueIdentifier>{A1B2C3D4-E5F6-7890-1234-56789ABCDEF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\data_model">
+      <UniqueIdentifier>{B2C3D4E5-F678-9012-3456-789ABCDEF012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\engine\graphics">
+      <UniqueIdentifier>{C3D4E5F6-7890-1234-5678-9ABCDEF01234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\script_execution">
+      <UniqueIdentifier>{D4E5F678-9012-3456-789A-BCDEF0123456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\script_environment">
+      <UniqueIdentifier>{E5F67890-1234-5678-9ABC-DEF012345678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\script_scheduler">
+      <UniqueIdentifier>{F6789012-3456-789A-BCDE-F0123456789A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\communication">
+      <UniqueIdentifier>{07890123-4567-89AB-CDEF-0123456789AB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Core -->
+    <ClInclude Include="src\core\globals.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\configuration.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\offsets.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\entry_point.hpp">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClCompile Include="src\core\entry_point.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    
+    <!-- Engine -->
+    <ClInclude Include="src\engine\pointer_encryption\pointer_encryption.hpp">
+      <Filter>src\engine\pointer_encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\data_model\data_model.hpp">
+      <Filter>src\engine\data_model</Filter>
+    </ClInclude>
+    <ClCompile Include="src\engine\data_model\data_model.cpp">
+      <Filter>src\engine\data_model</Filter>
+    </ClCompile>
+    <ClInclude Include="src\engine\graphics\graphics.hpp">
+      <Filter>src\engine\graphics</Filter>
+    </ClInclude>
+    <ClCompile Include="src\engine\graphics\graphics.cpp">
+      <Filter>src\engine\graphics</Filter>
+    </ClCompile>
+    
+    <!-- Script Execution -->
+    <ClInclude Include="src\script_execution\script_execution.hpp">
+      <Filter>src\script_execution</Filter>
+    </ClInclude>
+    <ClCompile Include="src\script_execution\script_execution.cpp">
+      <Filter>src\script_execution</Filter>
+    </ClCompile>
+    
+    <!-- Script Environment -->
+    <ClInclude Include="src\script_environment\script_environment.hpp">
+      <Filter>src\script_environment</Filter>
+    </ClInclude>
+    <ClCompile Include="src\script_environment\script_environment.cpp">
+      <Filter>src\script_environment</Filter>
+    </ClCompile>
+    
+    <!-- Script Scheduler -->
+    <ClInclude Include="src\script_scheduler\script_scheduler.hpp">
+      <Filter>src\script_scheduler</Filter>
+    </ClInclude>
+    <ClCompile Include="src\script_scheduler\script_scheduler.cpp">
+      <Filter>src\script_scheduler</Filter>
+    </ClCompile>
+    
+    <!-- Communication -->
+    <ClInclude Include="src\communication\communication.hpp">
+      <Filter>src\communication</Filter>
+    </ClInclude>
+    <ClCompile Include="src\communication\communication.cpp">
+      <Filter>src\communication</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

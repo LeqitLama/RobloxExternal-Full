@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8A2F3C91-B456-4D89-A123-F456789ABCDE}</ProjectGuid>
+    <RootNamespace>RobloxInternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;ROBLOX_INTERNAL_EXPORTS;_WINDOWS;_USRDLL;ZSTD_STATIC_LINKING_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)dependencies\luau\include;$(ProjectDir)dependencies\luau\src;$(ProjectDir)dependencies\zstd\src;$(ProjectDir)dependencies\zstd\src\common;$(ProjectDir)dependencies\xxhash;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;ROBLOX_INTERNAL_EXPORTS;_WINDOWS;_USRDLL;ZSTD_STATIC_LINKING_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)dependencies\luau\include;$(ProjectDir)dependencies\luau\src;$(ProjectDir)dependencies\zstd\src;$(ProjectDir)dependencies\zstd\src\common;$(ProjectDir)dependencies\xxhash;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- Core -->
+    <ClInclude Include="src\core\globals.hpp" />
+    <ClInclude Include="src\core\configuration.hpp" />
+    <ClInclude Include="src\core\offsets.hpp" />
+    <ClInclude Include="src\core\utils.hpp" />
+    <ClInclude Include="src\core\entry_point.hpp" />
+    <ClCompile Include="src\core\entry_point.cpp" />
+    
+    <!-- Engine -->
+    <ClInclude Include="src\engine\pointer_encryption\pointer_encryption.hpp" />
+    <ClInclude Include="src\engine\data_model\data_model.hpp" />
+    <ClCompile Include="src\engine\data_model\data_model.cpp" />
+    <ClInclude Include="src\engine\graphics\graphics.hpp" />
+    <ClCompile Include="src\engine\graphics\graphics.cpp" />
+    
+    <!-- Script Execution -->
+    <ClInclude Include="src\script_execution\script_execution.hpp" />
+    <ClCompile Include="src\script_execution\script_execution.cpp" />
+    
+    <!-- Script Environment -->
+    <ClInclude Include="src\script_environment\script_environment.hpp" />
+    <ClCompile Include="src\script_environment\script_environment.cpp" />
+    
+    <!-- Script Scheduler -->
+    <ClInclude Include="src\script_scheduler\script_scheduler.hpp" />
+    <ClCompile Include="src\script_scheduler\script_scheduler.cpp" />
+    
+    <!-- Communication -->
+    <ClInclude Include="src\communication\communication.hpp" />
+    <ClCompile Include="src\communication\communication.cpp" />
+    
+    <!-- Overlay -->
+    <ClInclude Include="src\overlay\overlay.hpp" />
+    
+    <!-- xxHash -->
+    <ClInclude Include="dependencies\xxhash\xxhash.h" />
+    
+    <!-- Luau Sources -->
+    <ClCompile Include="dependencies\luau\src\Allocator.cpp" />
+    <ClCompile Include="dependencies\luau\src\Ast.cpp" />
+    <ClCompile Include="dependencies\luau\src\BuiltinFolding.cpp" />
+    <ClCompile Include="dependencies\luau\src\Builtins.cpp" />
+    <ClCompile Include="dependencies\luau\src\BytecodeBuilder.cpp" />
+    <ClCompile Include="dependencies\luau\src\Compiler.cpp" />
+    <ClCompile Include="dependencies\luau\src\Confusables.cpp" />
+    <ClCompile Include="dependencies\luau\src\ConstantFolding.cpp" />
+    <ClCompile Include="dependencies\luau\src\CostModel.cpp" />
+    <ClCompile Include="dependencies\luau\src\Cst.cpp" />
+    <ClCompile Include="dependencies\luau\src\lcode.cpp" />
+    <ClCompile Include="dependencies\luau\src\Lexer.cpp" />
+    <ClCompile Include="dependencies\luau\src\Location.cpp" />
+    <ClCompile Include="dependencies\luau\src\Parser.cpp" />
+    <ClCompile Include="dependencies\luau\src\PrettyPrinter.cpp" />
+    <ClCompile Include="dependencies\luau\src\StringUtils.cpp" />
+    <ClCompile Include="dependencies\luau\src\TableShape.cpp" />
+    <ClCompile Include="dependencies\luau\src\TimeTrace.cpp" />
+    <ClCompile Include="dependencies\luau\src\Types.cpp" />
+    <ClCompile Include="dependencies\luau\src\ValueTracking.cpp" />
+    
+    <!-- zstd Common Sources -->
+    <ClCompile Include="dependencies\zstd\src\common\debug.c" />
+    <ClCompile Include="dependencies\zstd\src\common\entropy_common.c" />
+    <ClCompile Include="dependencies\zstd\src\common\error_private.c" />
+    <ClCompile Include="dependencies\zstd\src\common\fse_decompress.c" />
+    <ClCompile Include="dependencies\zstd\src\common\pool.c" />
+    <ClCompile Include="dependencies\zstd\src\common\threading.c" />
+    <ClCompile Include="dependencies\zstd\src\common\xxhash.c" />
+    <ClCompile Include="dependencies\zstd\src\common\zstd_common.c" />
+    
+    <!-- zstd Compress Sources -->
+    <ClCompile Include="dependencies\zstd\src\compress\fse_compress.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\hist.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\huf_compress.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_compress.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_compress_literals.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_compress_sequences.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_compress_superblock.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_double_fast.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_fast.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_lazy.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_ldm.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_opt.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstd_preSplit.c" />
+    <ClCompile Include="dependencies\zstd\src\compress\zstdmt_compress.c" />
+    
+    <!-- zstd Decompress Sources -->
+    <ClCompile Include="dependencies\zstd\src\decompress\huf_decompress.c" />
+    <ClCompile Include="dependencies\zstd\src\decompress\zstd_ddict.c" />
+    <ClCompile Include="dependencies\zstd\src\decompress\zstd_decompress.c" />
+    <ClCompile Include="dependencies\zstd\src\decompress\zstd_decompress_block.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
