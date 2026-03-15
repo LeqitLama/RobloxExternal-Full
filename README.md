@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=3B82F6&center=true&vCenter=true&width=500&lines=High-Performance+External;AI-Optimized+Pasted;Undetected+%26+Not updated" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=3B82F6&center=true&vCenter=true&width=500&lines=High-Performance+External;AI-Optimized+Logic;Undetected+%26+NOTUPDATED" alt="Typing SVG" />
 
 [![Owner](https://img.shields.io/badge/Founder-fake.legal-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://fake.legal)
 [![Discord](https://img.shields.io/badge/Discord-Join_Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/zHx7BgwGkX)
